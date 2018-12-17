@@ -65,4 +65,4 @@ I integrate surface gradience from 2 directions (LeftTop->Right Bottom, Right Bo
 
 &nbsp; 
 ### 5. Future Work
-The sample images are taken by a camera and the surface is not fully lambert refletance, so the mirror reflection (high light) causes the error the calibaration stage. Also if a pixel at the 3 input images are all black, there is no solution to the equation in the Step 2, we get error in some dark areas. Carefully placing light sources and using matte surface materials gives better results. 
+The sample images are taken by a camera and the surface is not fully lambert reflectance, so the mirror reflection (high light) causes the error of the calibration stage. Also if a pixel at the 3 input images is all black, there is no solution to the equation in Step 2, we get the error in some dark areas. Carefully placing light sources and using matte surface materials gives better results.
