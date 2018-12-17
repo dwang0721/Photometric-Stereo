@@ -15,12 +15,12 @@ The coordinate of the brightest spot is *L(x, y, z)*. By dividing the vector by 
 <a href="https://www.codecogs.com/eqnedit.php?latex=(\frac{x}{-z},&space;\frac{y}{-z},&space;\frac{z}{-z})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?(\frac{x}{-z},&space;\frac{y}{-z},&space;\frac{z}{-z})" title="(\frac{x}{-z}, \frac{y}{-z}, \frac{z}{-z})" /></a>
 </p>
 <p align="middle">
-<a href="https://www.codecogs.com/eqnedit.php?latex=p=&space;\frac{x}{-z},&space;q=&space;\frac{x}{-z}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p=&space;\frac{x}{-z},&space;q=&space;\frac{x}{-z}" title="p= \frac{x}{-z}, q= \frac{x}{-z}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=(\frac{x}{-z},&space;\frac{y}{-z},&space;-1)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?(\frac{x}{-z},&space;\frac{y}{-z},&space;-1)" title="(\frac{x}{-z}, \frac{y}{-z}, -1)" /></a>
 </p>
 
 Where we define *p*, *q* values of the Light *L* are:
 <p align="middle">
-<a href="https://www.codecogs.com/eqnedit.php?latex=p_L=&space;\frac{x}{-z},&space;q_L=&space;\frac{x}{-z}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p_L=&space;\frac{x}{-z},&space;q_L=&space;\frac{x}{-z}" title="p= \frac{x}{-z}, q= \frac{x}{-z}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=p=&space;\frac{x}{-z},&space;q=&space;\frac{x}{-z}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p=&space;\frac{x}{-z},&space;q=&space;\frac{x}{-z}" title="p= \frac{x}{-z}, q= \frac{x}{-z}" /></a>
 </p>
 
 &nbsp; 
