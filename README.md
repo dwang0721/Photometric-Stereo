@@ -2,7 +2,9 @@
 Given 3 images of the same object under different lighting conditions, recover the surface normal at each pixel and the overall shape of the object.
 This technique is used in [GelSight touch sensor](http://www.gelsight.com/), but my approach is simpler. 
 
+![GelSight](https://github.com/dwang0721/Photometric-Stereo/blob/master/readmeImage/gelSight.JPG)
 
+&nbsp; 
 ### 1. Find Light Direction
 
 Assuming lambert surface with all equal radiance from all angles, the Light direction is calculated by looking for the brightest spot on a sphere, I used Matlab to automatic find this position. 
@@ -20,6 +22,7 @@ Where we define *p*, *q* values of the Light *L* are:
 <a href="https://www.codecogs.com/eqnedit.php?latex=p_L=&space;\frac{x}{-z},&space;q_L=&space;\frac{x}{-z}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p_L=&space;\frac{x}{-z},&space;q_L=&space;\frac{x}{-z}" title="p= \frac{x}{-z}, q= \frac{x}{-z}" /></a>
 </p>
 
+&nbsp; 
 ### 2. Build Intensity Lookup Table
 Each Light *L* is represented by *p* and *q*. We know that the cross product of surface normal *n* and light is propotional to the image irradiance *E*:
 <p align="middle">
@@ -40,10 +43,15 @@ In Matlab, I used **scatterInterpolant** as the data structure to store *E1/E2* 
 *q* and *p* range from *-10* to *10*, with step size *0.1*. 
 
 
+&nbsp; 
 ### 3. Build pq Map:
 Since we have a Lookup table to find Gradience (p, q) at each pixel, we can easily build a gradience map the same size as the image. Each pixel of the image corresponds to a (p, q) value pair. I call this map pqMap. These pq value pair can also be represented by the surface normal.  
 
 I created a normal drawer function to plot the surface normals from a pqMap. Some render results:
+![normal](https://github.com/dwang0721/Photometric-Stereo/blob/master/readmeImage/normal%20plot.JPG)
 
+&nbsp; 
 ### 4. Recover the 3d model by Integration
 I integrate surface gradience from 2 directions (LeftTop->Right Bottom, Right Bottom->LeftTop) and averaged them out. Some results are here under:
+
+![integration](https://github.com/dwang0721/Photometric-Stereo/blob/master/readmeImage/integration.JPG)
