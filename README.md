@@ -51,16 +51,16 @@ Since we have a Lookup table to find Gradience (p, q) at each pixel, we can easi
 I created a normal drawer function to plot the surface normals from a pqMap. Some render results:
 
 <p align="middle">
-<img src="https://github.com/dwang0721/Photometric-Stereo/blob/master/readmeImage/normal%20plot.JPG" alt="normal" height="300" width="350">
-<img src="https://github.com/dwang0721/Photometric-Stereo/blob/master/readmeImage/normal%20plot_ellipsoid.JPG" alt="normal" height="300" width="350">
+<img src="https://github.com/dwang0721/Photometric-Stereo/blob/master/readmeImage/normal%20plot.JPG" alt="normal" height="340" width="400">
+<img src="https://github.com/dwang0721/Photometric-Stereo/blob/master/readmeImage/normal%20plot_ellipsoid.JPG" alt="normal" height="340" width="400">
 
 &nbsp; 
 ### 4. Recover the 3d model by Integration
 I integrate surface gradience from 2 directions (LeftTop->Right Bottom, Right Bottom->LeftTop) and averaged them out. Some results are here under:
 
 <p align="middle">
-<img src="https://github.com/dwang0721/Photometric-Stereo/blob/master/readmeImage/integration.JPG" alt="integration" height="300" width="350">
-<img src="https://github.com/dwang0721/Photometric-Stereo/blob/master/readmeImage/integration_ellipsoid.JPG" alt="integration" height="300" width="350">
+<img src="https://github.com/dwang0721/Photometric-Stereo/blob/master/readmeImage/integration.JPG" alt="integration" height="340" width="400">
+<img src="https://github.com/dwang0721/Photometric-Stereo/blob/master/readmeImage/integration_ellipsoid.JPG" alt="integration" height="340" width="400">
 
 
 &nbsp; 
