@@ -2,7 +2,8 @@
 Given 3 images of the same object under different lighting conditions, recover the surface normal at each pixel and the overall shape of the object.
 This technique is used in [GelSight touch sensor](http://www.gelsight.com/), but my approach is simpler. 
 
-![GelSight](https://github.com/dwang0721/Photometric-Stereo/blob/master/readmeImage/gelSight.JPG)
+<p align="middle">
+<img src="https://github.com/dwang0721/Photometric-Stereo/blob/master/readmeImage/gelSight.JPG" alt="GelSight" height="300" width="620">
 
 &nbsp; 
 ### 1. Find Light Direction
@@ -48,10 +49,20 @@ In Matlab, I used **scatterInterpolant** as the data structure to store *E1/E2* 
 Since we have a Lookup table to find Gradience (p, q) at each pixel, we can easily build a gradience map the same size as the image. Each pixel of the image corresponds to a (p, q) value pair. I call this map pqMap. These pq value pair can also be represented by the surface normal.  
 
 I created a normal drawer function to plot the surface normals from a pqMap. Some render results:
-![normal](https://github.com/dwang0721/Photometric-Stereo/blob/master/readmeImage/normal%20plot.JPG)
+
+<p align="middle">
+<img src="https://github.com/dwang0721/Photometric-Stereo/blob/master/readmeImage/normal%20plot.JPG" alt="normal" height="300" width="350">
+<img src="https://github.com/dwang0721/Photometric-Stereo/blob/master/readmeImage/normal%20plot_ellipsoid.JPG" alt="normal" height="300" width="350">
 
 &nbsp; 
 ### 4. Recover the 3d model by Integration
 I integrate surface gradience from 2 directions (LeftTop->Right Bottom, Right Bottom->LeftTop) and averaged them out. Some results are here under:
 
-![integration](https://github.com/dwang0721/Photometric-Stereo/blob/master/readmeImage/integration.JPG)
+<p align="middle">
+<img src="https://github.com/dwang0721/Photometric-Stereo/blob/master/readmeImage/integration.JPG" alt="integration" height="300" width="350">
+<img src="https://github.com/dwang0721/Photometric-Stereo/blob/master/readmeImage/integration_ellipsoid.JPG" alt="integration" height="300" width="350">
+
+
+&nbsp; 
+### 5. Future Work
+The sample images are taken by a camera and the surface is not lambert refletance, so the mirror reflection (high light) causes the error the calibaration stage. Also if a pixel at the 3 input images are all black, there is no solution to the equation in the Step 2, we get error in some dark areas. Carefully placing light source and using matte surface materials gives better results. 
